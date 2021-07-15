@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "units",
+  "info": {
+    "name": "Units",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Unit_number": {
+      "type": "string"
+    },
+    "Unit_Type": {
+      "type": "string"
+    },
+    "Rent": {
+      "type": "decimal"
+    },
+    "Gas_bill": {
+      "type": "decimal"
+    },
+    "Water_bill": {
+      "type": "decimal"
+    },
+    "Electricity_bill": {
+      "type": "decimal"
+    },
+    "isBooked": {
+      "type": "boolean"
+    },
+    "property": {
+      "model": "property",
+      "via": "units"
+    },
+    "tenant": {
+      "model": "tenants",
+      "via": "unit"
+    }
+  }
+}

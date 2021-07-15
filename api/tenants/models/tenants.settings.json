@@ -1,0 +1,82 @@
+{
+  "kind": "collectionType",
+  "collectionName": "tenants",
+  "info": {
+    "name": "Tenants"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Tenant_Name": {
+      "type": "string"
+    },
+    "Phone_number": {
+      "type": "string"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Tenant_nid_no": {
+      "type": "string"
+    },
+    "Tenant_nid_attachment": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Other_attachment": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Agreement_peaper": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "Adv_ammount": {
+      "type": "decimal"
+    },
+    "Tenant_Email": {
+      "type": "string"
+    },
+    "Starting_time": {
+      "type": "date"
+    },
+    "End_Time": {
+      "type": "date"
+    },
+    "Notes": {
+      "type": "text"
+    },
+    "unit": {
+      "via": "tenant",
+      "model": "units"
+    }
+  }
+}

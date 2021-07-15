@@ -1,0 +1,47 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "name": "Property",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Property_Name": {
+      "type": "string"
+    },
+    "Property": {
+      "type": "integer"
+    },
+    "Address": {
+      "type": "text"
+    },
+    "Manager_name": {
+      "type": "string"
+    },
+    "phone_number": {
+      "type": "string"
+    },
+    "Apt_document": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "units": {
+      "via": "property",
+      "collection": "units"
+    }
+  }
+}
